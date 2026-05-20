@@ -26,7 +26,45 @@ This commands includes
 • Other IP Commands e.g. show ip route etc.
 <BR>
 
+## Program
+SERVER
+```
+import socket
+
+s = socket.socket()
+s.connect(('localhost', 8000))
+
+while True:
+    ip = input("Enter the website you want to ping: ")
+    s.send(ip.encode())
+
+    print(s.recv(1024).decode())
+```
+CLIENT
+```
+import socket
+from pythonping import ping
+
+s = socket.socket()
+s.bind(('localhost', 8000))
+s.listen(5)
+
+c, addr = s.accept()
+
+while True:
+    hostname = c.recv(1024).decode()
+
+    try:
+        result = ping(hostname, verbose=False)
+        c.send(str(result).encode())
+
+    except KeyError:
+        c.send("Not Found".encode())
+```
+
 ## Output
 
+![alt text](image.png)
+![alt text](image-1.png)
 ## Result
 Thus Execution of Network commands Performed 
