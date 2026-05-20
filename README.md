@@ -63,8 +63,8 @@ while True:
 ```
 
 ## Output
+<img width="825" height="227" alt="image" src="https://github.com/user-attachments/assets/0f675320-8811-440a-b797-4435fa061e8c" />
+<img width="846" height="283" alt="image-1" src="https://github.com/user-attachments/assets/e48758e0-adf3-4f6e-9706-bb70d2e375e1" />
 
-![alt text](image.png)
-![alt text](image-1.png)
 ## Result
 Thus Execution of Network commands Performed 
